@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+
+        <div class="card-body">
+          <textarea
+            readonly
+            id="passwordBox"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-sm-3 specialChars">
+                <input type="checkbox" name="specialChars"checked> !@#$%
+            </div>
+            <div class="col-sm-3">
+                <input type="checkbox" name="numbers"checked> 0-9
+            </div>
+            <div class="col-sm-3">
+                <input type="checkbox" name="lwrChars"checked> a-z 
+            </div>
+            <div class="col-sm-3">
+                <input type="checkbox" name="upprChars"checked> A-Z 
+            </div>
+        </div>
+
+        <div class="card-footer">
+          <button class="passGenButn" onclick="createPassword()">Generate Password</button>
+        </div>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
